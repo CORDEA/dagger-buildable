@@ -10,7 +10,7 @@ ADD https://github.com/davido/bazel-alpine-package/releases/download/0.22.0/baze
 
 RUN \
         apk add --no-cache curl && \
-        apk add --no-cache --virtual=.build-dependencies git unzip && \
+        apk add --no-cache --virtual=.build-dependencies git unzip gcc && \
         apk add /tmp/bazel.apk && \
         mkdir /sdk && \
         unzip -q -d /sdk /tmp/sdk.zip && \
