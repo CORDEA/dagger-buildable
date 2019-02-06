@@ -15,6 +15,7 @@ RUN \
         mkdir /sdk && \
         unzip -q -d /sdk /tmp/sdk.zip && \
         rm /tmp/sdk.zip && \
+        yes | ./sdk/tools/bin/sdkmanager "platforms;android-26" && \
         rm /tmp/bazel.apk && \
         git clone "https://github.com/google/dagger" && \
         apk del .build-dependencies
